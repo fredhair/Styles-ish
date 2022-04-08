@@ -1,0 +1,7 @@
+@forward 'colors';
+@forward 'devices';
+@forward 'layouts';
+
+//TODO: CSSify scss variables. Either have a mixin that takes in SCSS variables and spits out CSS variables through interpolation --#{scss-var-name}
+// or simply have another file(s) that can be included which goes through each variable and creates the CSS var equivalent.
+// Even mapped variables could be interpolated e.g. map $breakpoints: ( 'sm': 30em ) -> --breakpoints-sm: 30em;

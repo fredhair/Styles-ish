@@ -1,0 +1,47 @@
+@use 'sass:math';
+@use '../variables/layouts';
+@use '../variables/devices';
+
+%centered-block {
+    display: block;
+    margin-inline: auto;
+}
+
+%absolute-centered {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+    //or ?
+    // inset: 50%;
+}
+
+@mixin column-width($column-count: 3) {
+    width: map-get($map: layouts.$columns, $key: $column-count) - math.div(layouts.$column-margin * ($column-count - 1), $column-count);
+}
+
+@mixin flex-col-width($column-count: 3, $min-width: layouts.$flex-col-min, $grow: 1) {
+    flex-basis: calc(map-get(layouts.$columns, $column-count) - layouts.$flex-col-gap);
+	max-width: map-get(layouts.$columns, $column-count);
+	min-width: $min-width;
+	flex-grow: $grow;
+}
+
+@mixin make-container($padding-x: layouts.$container-x-padding, $padding-y: layouts.$container-y-padding) {
+    @extend centered-block;
+    max-width: 100vw;
+
+	@each $name, $width in devices.$breakpoints {
+		// $width: map-get(breakpoints.$breakpoints, $i);
+		@if $name != "xs" {
+			@media screen and (min-width: $width) {
+				max-width: $width;
+			}
+		}
+    }
+}
+
+
+// Grid areas for common layouts
+
+//

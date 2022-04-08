@@ -1,0 +1,22 @@
+@use 'sass:list';
+
+@mixin transition-grow($actions: (hover, active), $scale: 1.2, $timing: ease-in-out, $duration: 200ms, $delay: 0s) {
+	transition: transform $duration $timing $delay;
+    @each $action in $actions {
+        #{if(list.index($actions, $action) == length($actions), "&:#{$action}", "&:#{$action},")} {
+            transform: scale($scale);
+        }
+    }
+}
+
+//Trying to combine selectors rather than having them seperate
+// @mixin transition-grow($actions: (hover, active), $scale: 1.2, $timing: ease-in-out, $duration: 200ms, $delay: 0s) {
+// 	transition: transform $duration $timing $delay;
+//     @each $action in $actions {
+//         #{if(list.index($actions, $action) == length($actions), "&:#{$action}", "&:#{$action},")} 
+            
+        
+//     } {
+//         transform: scale($scale);
+//     }
+// }

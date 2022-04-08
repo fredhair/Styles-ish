@@ -1,0 +1,30 @@
+@use 'sass:color';
+
+$light-theme-primary: hsl(197, 71%, 73%) !default;    //skyblue
+$light-theme-secondary: hsl(300, 76%, 72%) !default;  //violet
+$light-theme-tertiary: hsl(60, 100%, 94%) !default;   //lightyellow
+
+$dark-theme-primary: hsl(260, 35%, 12%) !default;
+$dark-theme-secondary: hsl(300, 50%, 10%) !default;
+$dark-theme-tertiary: hsl(0, 0%, 15%) !default;
+
+$dark-text: hsl(0, 0%, 20%) !default;    // #333
+$light-text: hsl(0, 0%, 80%) !default;   // #ccc
+
+// @media screen and (prefers-color-scheme: light) {
+    $theme-primary: $light-theme-primary !default; 
+    $theme-secondary: $light-theme-secondary !default; 
+    $theme-tertiary: $light-theme-tertiary !default;
+    $text: $light-text !default;
+// }
+
+@media screen and (prefers-color-scheme: dark) {
+    $theme-primary: $dark-theme-primary !default; 
+    $theme-secondary: $dark-theme-secondary !default; 
+    $theme-tertiary: $dark-theme-tertiary !default;
+    $text: $dark-text !default;
+}
+
+
+$border: $theme-primary;
+$selection-bg: color.adjust($theme-primary, $alpha: .75);

@@ -1,0 +1,48 @@
+//breakpoints
+$breakpoints: (
+    "xs": 20em,
+    "s": 30em,
+    "m": 48em,
+    "l": 64em,
+    "xl": 75em,
+    "xxl": 87em,
+);
+
+@mixin breakpoint-up($size) {
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media screen and (max-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-only($size) {
+
+    //Get index of arg breakpoint
+    $keys: map-keys($breakpoints);
+    $index: index($keys, $size);
+    //if current index exists
+    @if $index {
+        //this is the top breakpoint
+        $min: map-get($breakpoints, $size);
+        @if $index == length($keys) {
+            @media screen and (min-width: $min) {
+                @content;
+            }
+        }
+        @else {
+            $nextBreakpoint: nth($keys, $index + 1);
+            @media screen and (min-width: $min) and (max-width: map-get($breakpoints, $nextBreakpoint)) {
+                @content;
+            }
+        }
+    }
+    @else {
+        @error 'breakpoint invalid'
+    }
+
+}

@@ -1,0 +1,25 @@
+@use '../variables/colors';
+
+:root {
+    // sets the accent color for inputs like checkboxes etc
+    accent-color: colors.$theme-primary;
+
+    // scrolling to anchor tags should be smooth
+    scroll-behavior: smooth;
+
+    // sets main scrollbar colours and width (can be used with * for all scrollbars) 
+    // (limited support at time of writing)
+    // scrollbar-width: thin;
+    // scrollbar-color: colors.$theme-primary transparent;
+}
+
+// colours text selection
+// ::selection {
+//     background-color: $theme-secondary;
+//     color: $text;
+// }
+
+// snap to sections
+// section {
+//     scroll-snap-type: block proximity;
+// }

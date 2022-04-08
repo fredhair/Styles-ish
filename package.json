@@ -1,0 +1,26 @@
+{
+  "name": "styles-ish",
+  "version": "1.0.0",
+  "description": "An opinionated SCSS library, intended to aid common web design patterns, layouts and styles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredhair/Styles-ish.git"
+  },
+  "keywords": [
+    "SCSS",
+    "SASS",
+    "CSS",
+    "styles",
+    "utilities"
+  ],
+  "author": "Danny Pendle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fredhair/Styles-ish/issues"
+  },
+  "homepage": "https://github.com/fredhair/Styles-ish#readme"
+}
