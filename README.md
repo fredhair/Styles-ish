@@ -3,18 +3,12 @@
 ## What is Styles-ish?
 Styles-ish is an opinionated set of SCSS utilities, classes, mixins intended to make lives easier for front-end designers.
 Using SCSS makes it easier to write styles so Styles-ish provides a SCSS library rather than a CSS library. 
-This allows style-ish to provide more functionality than pure CSS could easily do, it also makes it easier to extend in your own codebase.
+This allows style-ish to provide more functionality than pure CSS could easily do (at time of writing, thought this is quickly changing), it also makes it easier to extend in your own codebase due to SCSS' module system.
 
 Styles-ish provides utilities for common design patterns, layouts and frequently (ab)used functionality!
-Styles-ish isn't quite Bootstrap, and it isn't quite Tailwind (both of which are great libraries).
-Instead Styles-ish wants to be useful a starting point for a tailor made library which applies specifically to the projects that you write.
+Styles-ish certainly isn't Bootstrap or Tailwind (both of which are great libraries), Styles-ish is intended to be a much humbler starting point of useful utilities that you can pick and choose.
+Styles-ish wants to be useful a starting point which applies specifically to the projects that you write.
 Customize it, extend it, include the bits you need and throw away those you don't!
-
-Styles-ish doesn't require a vast amount of CSS classes that probably sit unused on your client's browser; eating up their bandwidth!
-Instead, Styles-ish is intended to be compiled, minimized, extended, used as needed and genuinely useful.
-Runtime performance is important to us, so Styles-ish is split into many files and divided into folders by category so you can use just what you need.
-Although Styles-ish does provide many utility classes, they're secondary to the internals of the library.
-Utility classes are provided separately (in different files) so that you can use them if you want or for a really lightweight experience; build your own as needed!
 
 ## Some Useful Points
 - Styles-ish may be nicely integrated with normalize.css for a consistent crossbrowser experience.
