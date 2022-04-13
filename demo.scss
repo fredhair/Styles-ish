@@ -1,5 +1,0 @@
-@use 'all';
-
-.my-btn {
-    @include all.transition-grow();
-}

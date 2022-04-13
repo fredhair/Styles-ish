@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use 'devices';
+
 $container-x-padding: 1.5rem !default;
 $container-y-padding: .5rem !default;
 $container-x-margin: auto !default;
@@ -20,8 +23,16 @@ $columns: (
 
 $column-margin: 3% !default;
 
-$flex-col-gap: 1.5rem !default;
+$flex-col-gap: .5rem !default;
+$flex-row-gap: .5rem !default;
 
 $flex-col-min: 10rem !default;
 
 $sidebar-width: 25% !default;
+
+//Not sure if this is necessary given that make-container uses breakpoints naturally
+// $container-widths: ('full': 100%);
+
+// @each $name, $width in devices.$breakpoints {
+// 	$container-widths: map.set($container-widths, $name, $width);
+// }
